@@ -2,9 +2,11 @@ exports.up = function (knex) {
   return knex.schema.createTable("cars", (tbl) => {
     tbl.increments();
     tbl.string("VIN", 100).notNullable().unique();
-    tbl.string("MAKE", 100).notNullable();
-    tbl.string("MODEL", 100).notNullable();
-    tbl.string("MILEAGE", 100).notNullable();
+    tbl.string("Make", 100).notNullable();
+    tbl.string("Model", 100).notNullable();
+    tbl.string("Mileage", 100).notNullable();
+    tbl.string("Transmission", 100);
+    tbl.string("Title", 100);
   });
 };
 
